@@ -35,19 +35,22 @@ public class WanderingIguana : MonoBehaviour
 
         if (Physics.SphereCast(ray, 0.5f, out hit))
         {
-            if (Mathf.Approximately(turn, 0.0f))
-            {
-                turn = Random.Range(0, 2) == 0 ? 0.75f : 0.75f;
+            if (hit.distance< obstacleRange) {
+                if (Mathf.Approximately(turn, 0.0f))
+                {
+                    turn = Random.Range(0, 2) == 0 ? 0.75f : 0.75f;
+                }
+
+                Move(turn, 0.1f);
             }
+            else
+            {
+                float forwardSpeed = Random.Range(0.05f, 1.0f);
+                turn = 0.0f;
 
-            Move(turn, 0.1f);
+                Move(turn, forwardSpeed);
+            }
         }
-        else
-        {
-            float forwardSpeed = Random.Range(0.05f, 1.0f);
-            turn = 0.0f;
-
-            Move(turn, forwardSpeed);
-        }
+       
     }
 }

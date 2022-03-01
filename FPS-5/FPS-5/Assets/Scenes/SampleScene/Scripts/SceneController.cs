@@ -23,7 +23,7 @@ public class SceneController : MonoBehaviour
         {
             iguana = Instantiate(iguanaPrefab) as GameObject;
             messOfIguanas[i] = iguana;
-            iguana.transform.position = new Vector3(0, 0, 5);
+            iguana.transform.position = new Vector3(-3.15f, 0, 7.55f);
             float angle = Random.Range(0, 360);
             iguana.transform.Rotate(0, angle, 0);
         }

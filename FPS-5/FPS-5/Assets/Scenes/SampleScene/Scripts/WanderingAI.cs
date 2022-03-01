@@ -7,7 +7,7 @@ public enum EnemyStates { alive, dead };
 public class WanderingAI : MonoBehaviour
 {
     private float sphereRadius = 0.75f;
-    private float enemySpeed = 3.0f;
+    private float enemySpeed = 1.75f;
     private float obstacleRange = 5.0f;
     private EnemyStates state;
     [SerializeField] 
@@ -27,7 +27,7 @@ public class WanderingAI : MonoBehaviour
         this.state = state;
     }
 
-    private void OnDrawGizmosSelected() {
+    private void OnDrawGizmos() {
         Gizmos.color = Color.red;
         Vector3 rangeTest = transform.position + transform.forward * obstacleRange;
         Debug.DrawLine(transform.position, rangeTest);
