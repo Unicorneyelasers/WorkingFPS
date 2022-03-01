@@ -3,7 +3,9 @@ guid: 01ae053b49ee3114fbb81b297140afdc
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - enemyPrefab: {fileID: 3909690735496286403, guid: f895f614387583645a3dffb29198ea2e, type: 3}
+  - iguanaPrefab: {fileID: 2458557073589018900, guid: 0747fb2126c211e408283c97b764a32b, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
