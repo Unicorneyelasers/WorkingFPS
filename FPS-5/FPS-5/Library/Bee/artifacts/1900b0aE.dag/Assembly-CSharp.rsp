@@ -324,10 +324,12 @@
 "Assets/Scenes/SampleScene/Scripts/FPSInput.cs"
 "Assets/Scenes/SampleScene/Scripts/LaserShooter.cs"
 "Assets/Scenes/SampleScene/Scripts/MouseLook.cs"
+"Assets/Scenes/SampleScene/Scripts/OptionsPopUp.cs"
 "Assets/Scenes/SampleScene/Scripts/PlayerCharacter.cs"
 "Assets/Scenes/SampleScene/Scripts/RayShooter.cs"
 "Assets/Scenes/SampleScene/Scripts/ReactiveTarget.cs"
 "Assets/Scenes/SampleScene/Scripts/SceneController.cs"
+"Assets/Scenes/SampleScene/Scripts/UIController.cs"
 "Assets/Scenes/SampleScene/Scripts/WanderingAI.cs"
 -langversion:8.0
 
