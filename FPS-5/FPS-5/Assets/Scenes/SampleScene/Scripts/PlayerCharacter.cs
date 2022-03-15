@@ -6,6 +6,7 @@ public class PlayerCharacter : MonoBehaviour
 {
     private int health;
     // Start is called before the first frame update
+    
     void Start()
     {
         health = 5;        
@@ -13,6 +14,7 @@ public class PlayerCharacter : MonoBehaviour
     public void Hit()
     {
         health -= 1;
+        
         Debug.Log("Health: " + health);
         if(health == 0)
         {

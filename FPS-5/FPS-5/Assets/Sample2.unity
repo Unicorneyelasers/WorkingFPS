@@ -10935,6 +10935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   difficultySlider: {fileID: 1227163921}
   difficultyLabel: {fileID: 1877209522}
+  optionsPopUp: {fileID: 1470554396}
 --- !u!1 &1975769054
 GameObject:
   m_ObjectHideFlags: 0

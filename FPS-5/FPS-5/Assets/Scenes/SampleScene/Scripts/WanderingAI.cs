@@ -9,6 +9,8 @@ public class WanderingAI : MonoBehaviour
     private float sphereRadius = 0.75f;
     private float enemySpeed = 1.75f;
     private float obstacleRange = 5.0f;
+    private float baseSpeed = 0.25f;
+    float difficultySpeedDelta = 0.3f;
     private EnemyStates state;
     [SerializeField] 
     private GameObject laserbeamPrefab;
@@ -16,6 +18,17 @@ public class WanderingAI : MonoBehaviour
 
     public float fireRate = 2.0f;
     private float nextFire = 0.0f;
+
+    
+   public void SetDifficulty(int newDifficulty)
+    {
+        Debug.Log("WanderingAI.setDiffcutly(" + newDifficulty + ")");
+        enemySpeed = baseSpeed + (newDifficulty * difficultySpeedDelta);
+
+    }
+
+
+    
 
     void Start()
     {

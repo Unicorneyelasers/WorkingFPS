@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RayShooter : MonoBehaviour
 {
+    
     //[SerializeField]
     //private int aimSize = 16;
     [SerializeField]

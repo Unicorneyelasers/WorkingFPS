@@ -13,8 +13,22 @@ public class UIController : MonoBehaviour
     [SerializeField] private Image crossHair;
     [SerializeField] private OptionsPopUp optionsPopUp;
     [SerializeField] private SettingsPopUp settingsPopUp;
-    
-    
+
+
+    private void Awake()
+    {
+        Messenger.AddListener(GameEvent.ENEMY_DEAD, OnEnemyDead);
+    }
+    private void OnDestroy()
+    {
+        Messenger.RemoveListener(GameEvent.ENEMY_DEAD, OnEnemyDead);
+    }
+
+    private void OnEnemyDead()
+    {
+        score++;
+        UpdateScore(score);
+    }
     public void UpdateScore(int newScore)
     {
         scoreValue.text = newScore.ToString();
