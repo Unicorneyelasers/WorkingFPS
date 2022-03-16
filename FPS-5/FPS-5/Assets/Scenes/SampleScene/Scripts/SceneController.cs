@@ -18,13 +18,19 @@ public class SceneController : MonoBehaviour
     private void Awake()
     {
         Messenger<int>.AddListener(GameEvent.DIFFICULTY_CHANGED, OnDifficultyChanged);
+       // Messenger<float>.AddListener(GameEvent.HEALTH_CHANGED, OnHealthChanged);
     }
     private void OnDestroy()
     {
         Messenger<int>.RemoveListener(GameEvent.DIFFICULTY_CHANGED, OnDifficultyChanged);
+        //Messenger<float>.AddListener(GameEvent.HEALTH_CHANGED, OnHealthChanged);
+
     }
-   
-    
+
+    //void OnHealthChanged(float healthPercent)
+    //{
+    //    Debug.Log("Health changed to: ");//+ healthPercent);
+    //}
     void OnDifficultyChanged(int newDifficulty)
     {
         Debug.Log("Scene.difficultyChanged(" + newDifficulty + ")");
