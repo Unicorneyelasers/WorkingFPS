@@ -18,12 +18,18 @@ public class UIController : MonoBehaviour
     private void Awake()
     {
         Messenger.AddListener(GameEvent.ENEMY_DEAD, OnEnemyDead);
+        Messenger<float>.AddListener(GameEvent.HEALTH_CHANGED, OnHealthChanged);
     }
     private void OnDestroy()
     {
         Messenger.RemoveListener(GameEvent.ENEMY_DEAD, OnEnemyDead);
+        Messenger<float>.AddListener(GameEvent.HEALTH_CHANGED, OnHealthChanged);
     }
 
+    void OnHealthChanged(float healthPercent)
+    {
+        Debug.Log("Health changed to: ");//+ healthPercent);
+    }
     private void OnEnemyDead()
     {
         score++;
