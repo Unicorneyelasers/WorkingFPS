@@ -6,6 +6,7 @@ using TMPro;
 
 public class UIController : MonoBehaviour
 {
+    private int maxHealth = 5;
     private int score = 0;
     [SerializeField] private TextMeshProUGUI scoreValue;
     // Start is called before the first frame update
@@ -28,7 +29,9 @@ public class UIController : MonoBehaviour
 
     void OnHealthChanged(float healthPercent)
     {
-        Debug.Log("Health changed to: ");//+ healthPercent);
+        
+        Debug.Log("Health changed to: "+ healthPercent);
+        healthBar.fillAmount = healthPercent;
     }
     private void OnEnemyDead()
     {
